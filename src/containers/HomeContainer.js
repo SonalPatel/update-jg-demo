@@ -14,6 +14,24 @@ class HomeContainer extends React.Component {
             app to show the updated code
           </p>
         </div>
+
+        <div className="flex-grid mt">
+          <div className="col">
+            <h2>The updated assesment has the following changes:</h2>
+            <ul>
+              <li> x </li>
+              <li> x </li>
+              <li> x </li>
+              <li> x </li>
+              <li> x </li>
+              <li> x </li>
+              <li> x </li>
+              <li> x </li>
+              <li> x </li>
+              <li> x </li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }

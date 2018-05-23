@@ -34,11 +34,27 @@ header {
 .content-wrap {
   margin-top: 1rem;
   background: #000;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 29px 0 29px;
+    border-color: #000 transparent transparent transparent;
+    bottom: -30px;
+    left: 42vw;
+    @media screen and (min-width: 768px) {
+      left: 50vw;
+    }
+  }
   h2,
   p {
     color: #ffffff;
     text-align: center;
-    padding: 3rem;
+    padding: 2rem 3rem 2rem 3rem;
+    border: 1px solid yellow;
   }
 }
 
