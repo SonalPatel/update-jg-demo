@@ -1,6 +1,17 @@
 import React from "react";
 import jgLogo from "../g-logo-small.png";
 import "../styles/App.css";
+/* import BrowserRouter from 'react-router-dom' */
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import WrapContainer from "./containers/WrapContainer";
+import WrapContainerUpdate from "./containers/WrapContainerUpdate";
+
+/* Home component */
+const Home = () => (
+  <div>
+    <h2>Home xxxxx</h2>
+  </div>
+);
 
 class Header extends React.Component {
   render() {
@@ -40,6 +51,27 @@ class Header extends React.Component {
                   </a>
                 }
               </div>
+              <nav>
+                <div>
+                  <ul>
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/containers/WrapContainer">
+                        First assesment
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/containers/WrapContainerUpdate">
+                        Updated assesment
+                      </Link>
+                    </li>
+                  </ul>
+
+                  <hr />
+                </div>
+              </nav>
             </header>
           </div>
         </div>
