@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
+/* import BrowserRouter from 'react-router-dom' */
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import WrapContainer from "./containers/WrapContainer";
+import WrapContainerUpdate from "./containers/WrapContainerUpdate";
 
 const BasicExample = () => (
   <Router>
@@ -10,18 +13,18 @@ const BasicExample = () => (
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/first">First assesment</Link>
+          <Link to="/containers/WrapContainer">First assesment</Link>
         </li>
         <li>
-          <Link to="/second">Second assesment</Link>
+          <Link to="/containers/WrapContainerUpdate">Updated assesment</Link>
         </li>
       </ul>
 
       <hr />
 
       <Route exact path="/" component={Home} />
-      <Route path="/first" component={First} />
-      <Route path="/second" component={Second} />
+      <Route path="/containers" component={WrapContainer} />
+      <Route path="/containers" component={WrapContainerUpdate} />
     </div>
   </Router>
 );
@@ -32,15 +35,29 @@ const Home = () => (
   </div>
 );
 
-const First = () => (
-  <div>
-    <h2>First</h2>
-  </div>
-);
-const second = () => (
-  <div>
-    <h2>second</h2>
-  </div>
-);
-
 export default BasicExample;
+
+/*
+import React, { Component } from "react";
+import "./styles/App.css";
+import Header from "./components/Header.js";
+import WrapContainer from "./containers/WrapContainer.js";
+import Footer from "./components/Footer.js";
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <WrapContainer />
+        <Footer />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+*/
