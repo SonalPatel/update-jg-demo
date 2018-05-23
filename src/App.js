@@ -6,7 +6,6 @@ import WrapContainer from "./containers/WrapContainer";
 import WrapContainerUpdate from "./containers/WrapContainerUpdate";
 import Header from "./components/Header.js";
 import HomeContainer from "./containers/HomeContainer.js";
-//import Footer from "./components/Footer.js";
 
 class App extends Component {
   render() {

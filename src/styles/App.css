@@ -314,6 +314,11 @@ header {
     header .jg-logo-container .jg-logo {
       height: auto;
       width: 100%; }
+  header nav {
+    display: inline-flex; }
+    header nav li {
+      display: inline-block;
+      padding: 0.5rem; }
 
 /*charity module */
 .content-info {

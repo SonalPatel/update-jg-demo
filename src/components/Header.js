@@ -46,7 +46,7 @@ class Header extends React.Component {
                 <div>
                   <ul>
                     <li>
-                      <Link to="/home">Home</Link>
+                      <Link to="/home">Home </Link>
                     </li>
                     <li>
                       <Link to="/first">First assesment</Link>
@@ -55,8 +55,6 @@ class Header extends React.Component {
                       <Link to="/updated">Updated assesment</Link>
                     </li>
                   </ul>
-
-                  <hr />
                 </div>
               </nav>
             </header>

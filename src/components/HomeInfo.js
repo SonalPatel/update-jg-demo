@@ -6,6 +6,10 @@ class HomeInfo extends React.Component {
       <div className="flex-grid mt">
         <div className="col">
           <p>Hello </p>
+          <p>Hello </p>
+          <p>Hello </p>
+          <p>Hello </p>
+          <p>Hello </p>
         </div>
       </div>
     );
