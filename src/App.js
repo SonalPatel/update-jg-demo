@@ -6,7 +6,7 @@ import WrapContainer from "./containers/WrapContainer";
 import WrapContainerUpdate from "./containers/WrapContainerUpdate";
 import Header from "./components/Header.js";
 import HomeContainer from "./containers/HomeContainer.js";
-import Footer from "./components/Footer.js";
+//import Footer from "./components/Footer.js";
 
 class App extends Component {
   render() {
@@ -14,10 +14,6 @@ class App extends Component {
       <Router>
         <div>
           <Header />
-
-          <HomeContainer />
-
-          <Footer />
 
           <Route exact path="/home" component={HomeContainer} />
           <Route path="/first" component={WrapContainer} />

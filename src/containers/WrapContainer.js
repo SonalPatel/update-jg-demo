@@ -1,6 +1,7 @@
 import React from "react";
 import CharityInfo from "../components/CharityInfo.js";
 import Donations from "../components/Donations.js";
+import Footer from "../components/Footer.js";
 
 class WrapContainer extends React.Component {
   render() {
@@ -12,6 +13,10 @@ class WrapContainer extends React.Component {
 
         <div className="flex-grid">
           <Donations />
+        </div>
+
+        <div>
+          <Footer />
         </div>
       </div>
     );
