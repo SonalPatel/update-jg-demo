@@ -1,0 +1,139 @@
+@import "_colors.scss";
+@import "_typography.scss";
+@import "_mixins.scss";
+
+.off-screen {
+  height: 1px;
+  left: -50000px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
+}
+
+a.skip-link:active,
+a.skip-link:focus,
+a.skip-link:hover {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  color: $color-nero;
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+h2 {
+  color: $color-nero;
+  padding-bottom: 1.2rem;
+  font-size: $font-size-m;
+  font-weight: 100;
+}
+
+h3 {
+  color: $color-nero;
+  padding-bottom: 0.5rem;
+  font-size: $font-size-s;
+  font-weight: 100;
+}
+h4,
+h5,
+h6 {
+  color: $color-nero;
+  font-weight: 100;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: underline;
+  color: $color-brand-primary;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+a.brand {
+  color: $color-brand-primary;
+}
+
+a.links {
+  color: $color-empress;
+}
+
+.animate-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.animate-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $color-brand-primary;
+  transition: width 0.3s;
+}
+
+.animate-link:hover::after {
+  width: 100%;
+}
+
+.lds-circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.lds-circle:after {
+  content: " ";
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 3px solid $color-brand-primary;
+  border-color: $color-brand-primary transparent $color-brand-primary
+    ttransparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  a {
+    color: $color-brand-primary;
+  }
+}

@@ -1,0 +1,27 @@
+// I would usually add normalise here for prod.
+html {
+  cursor: default;
+  -ms-overflow-style: scrollbar;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd,
+ol,
+ul,
+ul li {
+  list-style: none;
+}
+
+li > {
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}

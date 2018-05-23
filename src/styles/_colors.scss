@@ -1,0 +1,28 @@
+$color-brand-primary: #ac29b5;
+$color-brand-charity: #45a811;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Greys
+$color-very-light-grey: #f9f9f9;
+$color-light-grey: #cccccc;
+$color-white-smoke: #f5f5f5;
+$color-nero: #262626;
+$color-empress: #737373;
+
+.brand-primary {
+  color: $color-brand-primary;
+}
+
+.brand-charity {
+  color: $color-brand-charity;
+}
+
+.color-light-grey {
+  color: $color-light-grey;
+}
+
+.color-dark-grey {
+  color: $color-empress;
+}

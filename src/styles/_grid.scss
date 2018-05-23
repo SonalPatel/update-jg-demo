@@ -1,0 +1,76 @@
+@import "_colors.scss";
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-grid .col {
+  flex: 1;
+}
+
+%flex-grid-two {
+  background: $color-white;
+  word-wrap: break-word;
+  justify-content: space-between;
+}
+
+.flex-grid-two-unequal {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  padding: 1em;
+  margin-bottom: 2rem;
+  @extend %flex-grid-two;
+}
+.flex-grid-two-unequal-small {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  background: $color-white-smoke;
+  @extend %flex-grid-two;
+}
+.col-one {
+  width: 55%;
+}
+
+.col-two {
+  width: 40%;
+}
+.col-one-small {
+  width: 70%;
+  background: $color-white-smoke;
+}
+
+.col-two-small {
+  width: 15%;
+  background: $color-white-smoke;
+}
+
+@media screen and (max-width: 767px) {
+  .flex-grid,
+  .flex-grid-two-unequal,
+  .flex-grid-two-unequal-small {
+    display: block;
+    .col-one,
+    .col-two,
+    .col-one-small,
+    .col-two-small {
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+  h1 {
+    display: block;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-grid {
+  margin: 0 0 1em 0;
+}
