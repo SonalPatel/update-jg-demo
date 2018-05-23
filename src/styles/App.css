@@ -320,6 +320,16 @@ header {
       display: inline-block;
       padding: 0.5rem; }
 
+/*home*/
+.content-wrap {
+  margin-top: 1rem;
+  background: #000; }
+  .content-wrap h2,
+  .content-wrap p {
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem; }
+
 /*charity module */
 .content-info {
   position: relative;

@@ -8,7 +8,7 @@ header {
   z-index: 1;
   .jg-logo-container {
     display: inline-block;
-    height: 65px; // TO DO make this responsive
+    height: 65px;
     width: 65px;
     line-height: 45px;
     letter-spacing: normal;
@@ -27,6 +27,18 @@ header {
       display: inline-block;
       padding: 0.5rem;
     }
+  }
+}
+
+/*home*/
+.content-wrap {
+  margin-top: 1rem;
+  background: #000;
+  h2,
+  p {
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem;
   }
 }
 

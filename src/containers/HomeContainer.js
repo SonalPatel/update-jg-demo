@@ -7,7 +7,7 @@ class HomeContainer extends React.Component {
   render() {
     return (
       <div className="container mt">
-        <div>
+        <div className="content-wrap">
           <h2>Welcome to my assesments</h2>
           <p>
             Following the feedback from the first assesment I have created a new
