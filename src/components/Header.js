@@ -55,6 +55,8 @@ class Header extends React.Component {
                       <Link to="/updated">Updated assesment</Link>
                     </li>
                   </ul>
+
+                  <hr />
                 </div>
               </nav>
             </header>

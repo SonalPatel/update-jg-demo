@@ -14,6 +14,7 @@ class App extends Component {
       <Router>
         <div>
           <Header />
+          <HomeContainer />
 
           <Route exact path="/home" component={HomeContainer} />
           <Route path="/first" component={WrapContainer} />
