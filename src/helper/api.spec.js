@@ -1,5 +1,6 @@
 import { getCharityById, getCharityDonationsById, AppId } from "./Api";
 
+// using "spy" (.fn) and returning an empty result
 window.fetch = jest.fn(async () => ({}));
 
 //testing the API function for the charity content
