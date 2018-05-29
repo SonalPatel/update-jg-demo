@@ -1,5 +1,5 @@
 import React from "react";
-export const AppId = "8b28a350"; //create the AppID into a variable as its re-used
+export const AppId = "8b28a350"; //make the AppID into a variable as its re-used
 
 //function for variable charity ID (using template literals which are string literals to allow embedded expressions eg. `string text` or `&{expression}`)
 export const getCharityById = charityId => {

@@ -2,7 +2,7 @@ import React from "react";
 import { getCharityById } from "./../helper/Api";
 
 class CharityInfoUpdate extends React.Component {
-  //settings and state (using this.state for the API)
+  //settings and state (using this.state for the API which is a React method)
   constructor(props) {
     super(props);
     this.state = {
@@ -13,14 +13,14 @@ class CharityInfoUpdate extends React.Component {
   }
 
   //when the component has mounted (page has loaded) we want to perform our ajax call using Fetch which is the modern way to make an ajax call
-  //( can check with console.log("did mount");)
+  //fetch returns a promise which contains various information.
   // the headers were required as the api was xml: if its not json then make it json.
   componentDidMount() {
     // call my re-useable function and manually enter the charity ID  (cruk: 2357, oxfam:13441, bhf: 183092 ).
     getCharityById(2357)
-      //fetching the json, (.then is like a callback function)  ****** EXPLAIN********
+      //fetching content of the promise as json content, (.then is like a callback function)  ****** EXPLAIN********
       .then(res => res.json())
-      //update the state with the info from the api (state is like a holding place setState is a react method) ****** SETSTATE********
+      //update the state with the info from the api (state is like a holding place, setState is a react method) ****** SETSTATE********
       .then(
         result => {
           this.setState({
@@ -46,7 +46,7 @@ class CharityInfoUpdate extends React.Component {
       return <div>Error: {error.message} </div>;
     }
 
-    //if its true that is has loaded then show the text loading message
+    //if its not true that content has loaded yet, then show the text loading message ************change this code as it's condfusing to read ***************
     if (!isLoaded) {
       return (
         <div className="brand-primary">
