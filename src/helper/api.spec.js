@@ -1,6 +1,6 @@
 import { getCharityById, getCharityDonationsById, AppId } from "./Api";
 
-// Testing Asynchronous Code with async and await, using "spy" (jest.fn) and returning an empty result
+// Testing Asynchronous Code with async and await, using "spy" (jest.fn which is a mock function) and returning an empty result
 window.fetch = jest.fn(async () => ({}));
 
 //testing the API function for the charity content

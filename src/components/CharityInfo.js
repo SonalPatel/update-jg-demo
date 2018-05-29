@@ -49,7 +49,7 @@ class CharityInfo extends React.Component {
     }
 
     //if its true that is has loaded then show the text loading message
-    if (!isLoaded) {
+    else if (!isLoaded) {
       return (
         <div className="brand-primary">
           <p>Loading charity content...</p>
@@ -59,47 +59,51 @@ class CharityInfo extends React.Component {
     }
     // returns the content from the api and then iterates over each object to allow me access to the info
     //(charityContent is my varible name for the instance of each index defined in the settings at the top);
-    return (
-      <div className="content-info" id="content" role="main">
-        <div className="charity-wrapper">
-          <div className="charity-logo-wrap">
-            <img
-              className="charity-logo img-fluid"
-              src={charityContent.logoAbsoluteUrl}
-              alt={`${charityContent.name} Logo`}
-            />
+    else {
+      return (
+        <div className="content-info" id="content" role="main">
+          <div className="charity-wrapper">
+            <div className="charity-logo-wrap">
+              <img
+                className="charity-logo img-fluid"
+                src={charityContent.logoAbsoluteUrl}
+                alt={`${charityContent.name} Logo`}
+              />
+            </div>
+
+            <h1 className="off-screen">{charityContent.name}</h1>
+          </div>
+          <div className="charity-info">
+            <h2>
+              {charityContent.name} {charityContent.impactStatementWhat} to{" "}
+              {charityContent.impactStatementWhy}
+            </h2>
+
+            <p>{charityContent.description}</p>
+            <a href={charityContent.profilePageUrl}>
+              Find out more about {charityContent.name}{" "}
+            </a>
           </div>
 
-          <h1 className="off-screen">{charityContent.name}</h1>
+          <aside role="complementary">
+            <ul className="list-items">
+              <li>
+                <strong>Contact us at: </strong>
+                <a href={`mailto${charityContent.emailAddress}`}>
+                  {charityContent.emailAddress}
+                </a>{" "}
+              </li>
+              <li>
+                <strong>
+                  {charityContent.name} registered charity number:
+                </strong>{" "}
+                {charityContent.id}
+              </li>
+            </ul>
+          </aside>
         </div>
-        <div className="charity-info">
-          <h2>
-            {charityContent.name} {charityContent.impactStatementWhat} to{" "}
-            {charityContent.impactStatementWhy}
-          </h2>
-
-          <p>{charityContent.description}</p>
-          <a href={charityContent.profilePageUrl}>
-            Find out more about {charityContent.name}{" "}
-          </a>
-        </div>
-
-        <aside role="complementary">
-          <ul className="list-items">
-            <li>
-              <strong>Contact us at: </strong>
-              <a href={`mailto${charityContent.emailAddress}`}>
-                {charityContent.emailAddress}
-              </a>{" "}
-            </li>
-            <li>
-              <strong>{charityContent.name} registered charity number:</strong>{" "}
-              {charityContent.id}
-            </li>
-          </ul>
-        </aside>
-      </div>
-    );
+      );
+    }
   }
 }
 

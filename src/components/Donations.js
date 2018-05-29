@@ -47,7 +47,7 @@ class Donations extends React.Component {
       return <div>Error: {error.message} </div>;
     }
     //if its true that is has loaded then show the text loading message
-    if (!isLoaded) {
+    else if (!isLoaded) {
       return (
         <div className="brand-primary">
           <p>Loading latest donation details...</p>
@@ -55,11 +55,12 @@ class Donations extends React.Component {
         </div>
       );
     }
-    {
-      // returns the content from the api and then iterates over each object to allow me access to the info ****** MAP AND KEY - ********
-      //map: mapping over the data that we’ve pulled. This is like a for loop.********
-      //key: https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2 .******** TO DO .********
-      //(content is my varible name for the instance of each index defined in the settings at the top);
+
+    // returns the content from the api and then iterates over each object to allow me access to the info ****** MAP AND KEY - ********
+    //map: mapping over the data that we’ve pulled. This is like a for loop.********
+    //key: https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2 .******** TO DO .********
+    //(content is my varible name for the instance of each index defined in the settings at the top);
+    else {
       return (
         <div className="donations-wrapper" id="latest-donations">
           <h2>
