@@ -17,7 +17,7 @@ class CharityInfoUpdate extends React.Component {
   // the headers were required as the api was xml: if its not json then make it json.
   componentDidMount() {
     // call my re-useable function and manually enter the charity ID  (cruk: 2357, oxfam:13441, bhf: 183092 ).
-    getCharityById(2357)
+    getCharityById(this.props.charityId)
       // taking  the previous promise, reading is and using another promise to make into Json (res) (.then is like a callback function)  ****** EXPLAIN********
       .then(res => res.json())
       //update the state with the info from the api (state is like a holding place, setState is a react method) ****** SETSTATE********
@@ -39,6 +39,7 @@ class CharityInfoUpdate extends React.Component {
   }
 
   render() {
+    //console.log(this.props.charityId);
     const { error, isLoaded, charityContent } = this.state;
     //check if error then display an error message {error.message} is part of react
     //check if the charityContent has loaded and set the state
