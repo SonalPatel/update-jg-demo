@@ -1,7 +1,7 @@
 import { getCharityById, getCharityDonationsById, AppId } from "./Api";
 import { charityId } from "../containers/WrapContainerUpdate";
 
-// Testing with async and await, using "spy" (jest.fn which is a mock function) and returning an
+//async and await, using "spy" (jest.fn which is a mock function) and returning an
 //empty result
 window.fetch = jest.fn(async () => ({}));
 
@@ -9,7 +9,7 @@ window.fetch = jest.fn(async () => ({}));
 describe("getCharityById", () => {
   it("should check the fetch was called", async () => {
     //const charityId = 2357;
-    console.log(charityId);
+    console.log();
     const options = {
       headers: {
         Accept: "application/json",

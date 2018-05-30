@@ -1,6 +1,6 @@
 import React from "react";
 import { getCharityDonationsById } from "./../helper/Api";
-//settings and state (using this.state for the API) //****** EXPLAIN setState********
+//settings
 class DonationsUpdate extends React.Component {
   constructor(props) {
     super(props);
@@ -38,13 +38,12 @@ class DonationsUpdate extends React.Component {
       );
   }
   render() {
-    const { error, isLoaded, content } = this.state;
-    //check if error then display an error message {error.message} is part of react
     //check if the content has loaded and set the state
+    const { error, isLoaded, content } = this.state;
     if (error) {
       return <div>Error: {error.message} </div>;
     }
-    //if its not true that content has loaded yet, then show the text loading message ************change this code as it's confusing to read ***************
+
     //if (!isLoaded) {
     if (isLoaded === false) {
       return (
@@ -55,10 +54,8 @@ class DonationsUpdate extends React.Component {
       );
     }
     {
-      // returns the content from the api and then iterates over each object to allow me access to the info  using ****** MAP AND KEY - ********
-      //map: mapping over the data that we’ve pulled. This is like a for loop.********
-      //key: https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2 .******** TO DO .********
-      //(content is my varible name for the instance of each index defined in the settings at the top);
+      // returns the content from the api and then iterates over each object to allow me access to the info  using  MAP AND KEY
+      //map: mapping over the data that we’ve pulled. This is like a for loop.
       return (
         <div className="donations-wrapper" id="latest-donations">
           <h2>
@@ -90,7 +87,7 @@ class DonationsUpdate extends React.Component {
                   {donation.message}{" "}
                 </p>
                 <p>
-                  <span class="fas fa-pound-sign" /> {donation.currencyCode}{" "}
+                  <span className="fas fa-pound-sign" /> {donation.currencyCode}{" "}
                   <strong>{donation.amount}</strong>{" "}
                 </p>
               </li>
