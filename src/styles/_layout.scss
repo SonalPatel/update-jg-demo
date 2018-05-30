@@ -54,17 +54,16 @@ header {
     color: #ffffff;
     text-align: center;
     padding: 2rem 3rem 2rem 3rem;
-    border: 1px solid yellow;
+    //border: 1px solid yellow;
   }
 }
-/*.content-description ul {
-  border: 1px solid red;
+.content-description {
+  padding: 2rem;
   li {
     display: inline-block;
     padding: 0.5rem;
-    background: aqua;
   }
-}*/
+}
 
 /*charity module */
 .content-info {

@@ -20,18 +20,72 @@ class HomeInfo extends React.Component {
               The <Link to="/updated">Updated assesment</Link> has the following
               changes:
             </h3>
-            <ul>
-              <li> TO DO </li>
-              <li> x </li>
-              <li> x </li>
-              <li> x </li>
-              <li> x </li>
-              <li> x </li>
-              <li> x </li>
-              <li> x </li>
-              <li> x </li>
-              <li> x </li>
-            </ul>
+            <ol>
+              <li>
+                {" "}
+                I branched off the first assesment and created a new instance of
+                create react app{" "}
+              </li>
+              <li>
+                Created new Components and wrappers for the updated code.{" "}
+              </li>
+              <li>Re-installed SASS</li>
+              <li>
+                Simplified my if/else statements with the feedback from last
+                time (I did actually implement this using ternary operators (?
+                :) but it was even more difficult to read so then removed this.){" "}
+              </li>
+              <li>
+                Made a Fetch method which is re-useable: I did this by creating
+                a function called Api.js, and making the AppID and the charityId
+                variables.{" "}
+              </li>
+              <li>
+                Then in each relevant Component used getCharityById(2357) and
+                hard coded the charity ID. and tested that this rendered with
+                different charities.
+              </li>
+              <li>
+                Then I followed the documentation on the ctreate react docs to
+                create new pages via React router dom{" "}
+              </li>
+              <li>
+                Updated the header accordingly to navigate to the correct pages.{" "}
+              </li>
+              <li>
+                Worked with Pete to write simple funtions and then learnt how to
+                write a basic unit test for each of them.{" "}
+              </li>
+              <li>
+                Re-searched implementing basic unit testing with Jest and
+                Enzyme, installed jest and Enzyme.{" "}
+              </li>
+              <li>
+                Created a unit test to take snapshots of the
+                charityContentUpdate Component in various states (the loading
+                state, and the whole rendered component).Testing this in the
+                terminal as I worked, and working through errors.{" "}
+              </li>
+              <li>
+                Worked on another unit test for the Api function which was
+                considerably more difficult to understand. This time using a
+                mock function, which are also known as spies, as they let you
+                spy on the behaviour of a function.{" "}
+              </li>
+
+              <li>
+                Lastly I made my variable in my function (charityId) into a
+                Prop, then used that prop for testing. This included assigning
+                the charityId to state, then passing that state to the two
+                Components as a prop. Exporting the charityId as a variable with
+                an ID (export const charityId = 2357;), and then assigningthe
+                charityId to state so{" "}
+                {`"state = {
+    charityId: charityId"
+  }; `}
+              </li>
+              <li> Quite a challenge! Lots more to learn for sure </li>
+            </ol>
           </div>
         </div>
       </div>

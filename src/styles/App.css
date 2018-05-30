@@ -342,17 +342,14 @@ header {
   .content-wrap p {
     color: #ffffff;
     text-align: center;
-    padding: 2rem 3rem 2rem 3rem;
-    border: 1px solid yellow; }
+    padding: 2rem 3rem 2rem 3rem; }
 
-/*.content-description ul {
-  border: 1px solid red;
-  li {
+.content-description {
+  padding: 2rem; }
+  .content-description li {
     display: inline-block;
-    padding: 0.5rem;
-    background: aqua;
-  }
-}*/
+    padding: 0.5rem; }
+
 /*charity module */
 .content-info {
   position: relative;
