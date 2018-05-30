@@ -61,67 +61,6 @@ exports[`Render CharityUpdate component should render full component 1`] = `
 </div>
 `;
 
-exports[`Render CharityUpdate component should render full page 1`] = `
-<div
-  className="content-info"
-  id="content"
-  role="main"
->
-  <div
-    className="charity-wrapper"
-  >
-    <div
-      className="charity-logo-wrap"
-    >
-      <img
-        alt="undefined Logo"
-        className="charity-logo img-fluid"
-      />
-    </div>
-    <h1
-      className="off-screen"
-    />
-  </div>
-  <div
-    className="charity-info"
-  >
-    <h2>
-       
-       to
-       
-    </h2>
-    <p />
-    <a>
-      Find out more about 
-       
-    </a>
-  </div>
-  <aside
-    role="complementary"
-  >
-    <ul
-      className="list-items"
-    >
-      <li>
-        <strong>
-          Contact us at: 
-        </strong>
-        <a
-          href="mailto:undefined"
-        />
-         
-      </li>
-      <li>
-        <strong>
-           registered charity number:
-        </strong>
-         
-      </li>
-    </ul>
-  </aside>
-</div>
-`;
-
 exports[`Render CharityUpdate component should render in a loading state 1`] = `
 <div
   className="brand-primary"

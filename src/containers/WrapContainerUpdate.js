@@ -3,12 +3,15 @@ import CharityInfoUpdate from "../components/CharityInfoUpdate";
 import DonationsUpdate from "../components/DonationsUpdate";
 import Footer from "../components/Footer.js";
 
+export const charityId = 2357;
+
 class WrapContainerUpdate extends React.Component {
-  //creating a state variable and setting the charityId and below passing the prop to the charityInfo compontent
+  //assinging the charityId to state, then passing that state to the charityInfoUpdate component as a prop.
   state = {
-    charityId: 2357
+    charityId: charityId
   };
   render() {
+    //console.log(this.state.charityId); same for this.props
     return (
       <div className="container">
         <div className="brand-banner">
@@ -16,7 +19,7 @@ class WrapContainerUpdate extends React.Component {
         </div>
 
         <div className="flex-grid">
-          <DonationsUpdate />
+          <DonationsUpdate charityId={this.state.charityId} />
         </div>
 
         <div>

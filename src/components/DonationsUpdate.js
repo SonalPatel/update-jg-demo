@@ -15,7 +15,8 @@ class DonationsUpdate extends React.Component {
   //can check with console.log("did mount");
   componentDidMount() {
     // call my re-useable function and manually enter the charity ID  (cruk: 2357, oxfam:13441, bhf: 183092 ).
-    getCharityDonationsById(2357)
+    //getCharityDonationsById(2357)
+    getCharityDonationsById(this.props.charityId)
       //fetching the json, (.then is like a callback function)  ****** EXPLAIN********
       .then(res => res.json())
       //update the state with the info from the api (state is like a holding place setState is a react method) ****** SETSTATE********
