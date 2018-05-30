@@ -42,23 +42,30 @@ class CharityInfoUpdate extends React.Component {
     const { error, isLoaded, charityContent } = this.state;
     //check if error then display an error message {error.message} is part of react
     //check if the charityContent has loaded and set the state
-    if (error) {
+    /*if (error) {
       return <div>Error: {error.message} </div>;
     }
-
-    //if its not true that content has loaded yet, then show the text loading message ************change this code as it's condfusing to read ***************
+    */
+    return error ? (
+      <div>Error: {error.message} </div>
+    ) : //if its not true that content has loaded yet, then show the text loading message ************change this code as it's condfusing to read ***************
     //if (!isLoaded) {
-    if (isLoaded === false) {
+    /*if (isLoaded === false) {
       return (
         <div className="brand-primary">
           <p>Loading charity content...</p>
           <div className="lds-circle" />
         </div>
       );
-    }
-    // returns the content from the api and then iterates over each object to allow me access to the info
-    //(charityContent is my varible name for the instance of each index defined in the settings at the top);
-    return (
+    }*/
+    isLoaded === false ? (
+      <div className="brand-primary">
+        <p>Loading charity content...</p>
+        <div className="lds-circle" />
+      </div>
+    ) : (
+      // returns the content from the api and then iterates over each object to allow me access to the info
+      //(charityContent is my varible name for the instance of each index defined in the settings at the top);
       <div className="content-info" id="content" role="main">
         <div className="charity-wrapper">
           <div className="charity-logo-wrap">
