@@ -2,7 +2,6 @@ import React from "react";
 import { getCharityById } from "./../helper/Api";
 
 class CharityInfoUpdate extends React.Component {
-  //settings and state
   constructor(props) {
     super(props);
     this.state = {
@@ -29,7 +28,7 @@ class CharityInfoUpdate extends React.Component {
             charityContent: result
           });
         },
-        //error function just in case (error is a built in react property)
+
         error => {
           this.setState({
             isLoaded: true,
@@ -42,12 +41,11 @@ class CharityInfoUpdate extends React.Component {
   render() {
     //console.log(this.props.charityId);
     const { error, isLoaded, charityContent } = this.state;
-    //check if error then display an error message {error.message} is part of react
+
     if (error) {
       return <div>Error: {error.message} </div>;
     }
 
-    //if the content has not loaded yet, then show the text loading message
     //if (!isLoaded) {
     if (isLoaded === false) {
       return (

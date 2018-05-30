@@ -1,6 +1,5 @@
 import React from "react";
 import { getCharityDonationsById } from "./../helper/Api";
-//settings
 class DonationsUpdate extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +41,7 @@ class DonationsUpdate extends React.Component {
     if (error) {
       return <div>Error: {error.message} </div>;
     }
-    //if the content has not loaded yet, then show the text loading message
+
     if (isLoaded === false) {
       return (
         <div className="brand-primary">

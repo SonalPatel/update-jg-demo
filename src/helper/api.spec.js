@@ -23,7 +23,7 @@ describe("getCharityById", () => {
   });
 });
 
-//teting the API function for the charity donations content
+//testing the API function for the charity donations content
 describe("getCharityDonationsById", () => {
   it("should check the fetch was called", async () => {
     //const charityId = 2357;  (no longer required)

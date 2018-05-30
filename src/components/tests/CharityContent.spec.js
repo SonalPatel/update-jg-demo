@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import CharityInfoUpdate from "../CharityInfoUpdate";
 import formatted from "enzyme-to-json"; //prettify is my variable name i can call it anything
 
-//take a snapshot of the loading state in the CHARITY component **********CHECK***************
+//take a snapshot of the loading state in the CHARITY component
 describe("Render CharityUpdate component", () => {
   // when the state is set to loading, take a snapshot of the html code in a readable format
   it("should render in a loading state", () => {
