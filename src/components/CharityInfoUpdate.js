@@ -18,7 +18,7 @@ class CharityInfoUpdate extends React.Component {
   componentDidMount() {
     // call my re-useable function and manually enter the charity ID  (cruk: 2357, oxfam:13441, bhf: 183092 ).
     getCharityById(2357)
-      //fetching content of the promise as json content, (.then is like a callback function)  ****** EXPLAIN********
+      // taking  the previous promise, reading is and using another promise to make into Json (res) (.then is like a callback function)  ****** EXPLAIN********
       .then(res => res.json())
       //update the state with the info from the api (state is like a holding place, setState is a react method) ****** SETSTATE********
       .then(
