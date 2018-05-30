@@ -7,20 +7,16 @@ class CharityInfoUpdate extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      charityContent: [] // my empty array
+      charityContent: []
     };
   }
 
-  //when the component has mounted (page has loaded) we want to perform our ajax call using Fetch which is the modern way to make an ajax call
   //fetch returns a promise which contains various information.
-  // the headers were required as the api was xml: if its not json then make it json.
   componentDidMount() {
-    // call my re-useable function and manually enter the charity ID  (cruk: 2357, oxfam:13441, bhf: 183092 ).
     //getCharityById(2357)
     getCharityById(this.props.charityId)
       // taking  the previous promise, reading it and using another promise to make into Json (res) (.then is like a callback function)
       .then(res => res.json())
-      //update the state with the info from the api (state is like a holding place, setState is a react method)
       .then(
         result => {
           this.setState({
@@ -39,14 +35,12 @@ class CharityInfoUpdate extends React.Component {
   }
 
   render() {
-    //console.log(this.props.charityId);
     const { error, isLoaded, charityContent } = this.state;
 
     if (error) {
       return <div>Error: {error.message} </div>;
     }
 
-    //if (!isLoaded) {
     if (isLoaded === false) {
       return (
         <div className="brand-primary">

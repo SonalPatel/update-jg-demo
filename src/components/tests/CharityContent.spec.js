@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import CharityInfoUpdate from "../CharityInfoUpdate";
-import formatted from "enzyme-to-json"; //formatt is my variable name i can call it anything
+import prettify from "enzyme-to-json"; //prettify is my variable
 
 //take a snapshot of the loading state in the CHARITY component
 describe("Render CharityUpdate component", () => {

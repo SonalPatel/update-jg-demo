@@ -48,7 +48,6 @@ exports[`Render CharityUpdate component should render full component 1`] = `
         <a
           href="mailto:undefined"
         />
-         
       </li>
       <li>
         <strong>

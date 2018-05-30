@@ -6,19 +6,17 @@ class DonationsUpdate extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      content: [] //my donations empty array
+      content: []
     };
   }
 
-  //when the page has loaded we want to perform our ajax call using Fetch which is the modern way to make an ajax call
-  //can check with console.log("did mount");
   componentDidMount() {
-    // call my re-useable function and manually enter the charity ID  (cruk: 2357, oxfam:13441, bhf: 183092 ).
-    //getCharityDonationsById(2357) - this is now replaced.
+    //getCharityDonationsById(2357) - this is now replaced as a prop below.
     getCharityDonationsById(this.props.charityId)
-      // taking  the previous promise, reading it and using another promise to make into Json (res) (.then is like a callback function)
+      // taking  the previous promise, reading it and using another promise to make into Json (res)
+      //(.then is like a callback function)
       .then(res => res.json())
-      //update the state with the info from the api (state is like a holding place, setState is a react method)
+      //update the state with the info from the api
       .then(
         result => {
           this.setState({
@@ -41,7 +39,7 @@ class DonationsUpdate extends React.Component {
     if (error) {
       return <div>Error: {error.message} </div>;
     }
-    //if the content has not loaded yet, then show the text loading message
+
     if (isLoaded === false) {
       return (
         <div className="brand-primary">
