@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./styles/App.css";
-/* import BrowserRouter from 'react-router-dom' */
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import WrapContainer from "./containers/WrapContainer";
 import WrapContainerUpdate from "./containers/WrapContainerUpdate";

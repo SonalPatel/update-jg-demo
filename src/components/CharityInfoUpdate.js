@@ -2,7 +2,7 @@ import React from "react";
 import { getCharityById } from "./../helper/Api";
 
 class CharityInfoUpdate extends React.Component {
-  //settings and state (using this.state for the API which is a React method)
+  //settings and state
   constructor(props) {
     super(props);
     this.state = {
@@ -19,9 +19,9 @@ class CharityInfoUpdate extends React.Component {
     // call my re-useable function and manually enter the charity ID  (cruk: 2357, oxfam:13441, bhf: 183092 ).
     //getCharityById(2357)
     getCharityById(this.props.charityId)
-      // taking  the previous promise, reading is and using another promise to make into Json (res) (.then is like a callback function)  ****** EXPLAIN********
+      // taking  the previous promise, reading it and using another promise to make into Json (res) (.then is like a callback function)
       .then(res => res.json())
-      //update the state with the info from the api (state is like a holding place, setState is a react method) ****** SETSTATE********
+      //update the state with the info from the api (state is like a holding place, setState is a react method)
       .then(
         result => {
           this.setState({
@@ -43,12 +43,11 @@ class CharityInfoUpdate extends React.Component {
     //console.log(this.props.charityId);
     const { error, isLoaded, charityContent } = this.state;
     //check if error then display an error message {error.message} is part of react
-    //check if the charityContent has loaded and set the state
     if (error) {
       return <div>Error: {error.message} </div>;
     }
 
-    //if its not true that content has loaded yet, then show the text loading message ************change this code as it's condfusing to read ***************
+    //if the content has not loaded yet, then show the text loading message
     //if (!isLoaded) {
     if (isLoaded === false) {
       return (
@@ -92,7 +91,7 @@ class CharityInfoUpdate extends React.Component {
               <strong>Contact us at: </strong>
               <a href={`mailto:${charityContent.emailAddress}`}>
                 {charityContent.emailAddress}
-              </a>{" "}
+              </a>
             </li>
             <li>
               <strong>{charityContent.name} registered charity number:</strong>{" "}

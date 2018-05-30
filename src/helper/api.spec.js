@@ -7,7 +7,7 @@ window.fetch = jest.fn(async () => ({}));
 //testing the API function for the charity content
 describe("getCharityById", () => {
   it("should check the fetch was called", async () => {
-    //const charityId = 2357;
+    //const charityId = 2357; (no longer required)
     console.log();
     const options = {
       headers: {
@@ -26,7 +26,7 @@ describe("getCharityById", () => {
 //teting the API function for the charity donations content
 describe("getCharityDonationsById", () => {
   it("should check the fetch was called", async () => {
-    //const charityId = 2357;
+    //const charityId = 2357;  (no longer required)
     const options = {
       headers: {
         Accept: "application/json",

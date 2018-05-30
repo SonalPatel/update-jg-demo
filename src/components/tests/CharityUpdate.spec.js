@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import DonationsUpdate from "../DonationsUpdate";
 
-//testing if my page still renders if there is no charity content (manually refer to an invalid charityID in CharityInfoUpdate component )
+//testing if my page still renders if there is no charity content
 describe("should still render the page if there is no charity content", () => {
   it("should render the page with the donations content", () => {
     expect(

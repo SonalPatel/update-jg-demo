@@ -1,7 +1,6 @@
 import React from "react";
 import jgLogo from "../g-logo-small.png";
 import "../styles/App.css";
-/* import BrowserRouter from 'react-router-dom' */
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Header extends React.Component {
@@ -31,16 +30,10 @@ class Header extends React.Component {
           <div className="col">
             <header>
               <div className="jg-logo-container">
-                {
-                  <a className="jg-logo" href="https://home.justgiving.com/">
-                    <img
-                      className="jg-logo"
-                      src={jgLogo}
-                      alt="JustGiving home"
-                    />
-                    <span className="off-screen">JustGiving Home</span>
-                  </a>
-                }
+                <a className="jg-logo" href="https://home.justgiving.com/">
+                  <img className="jg-logo" src={jgLogo} alt="JustGiving home" />
+                  <span className="off-screen">JustGiving Home</span>
+                </a>
               </div>
               <nav>
                 <div>

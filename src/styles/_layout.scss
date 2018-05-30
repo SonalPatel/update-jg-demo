@@ -54,7 +54,6 @@ header {
     color: #ffffff;
     text-align: center;
     padding: 2rem 3rem 2rem 3rem;
-    //border: 1px solid yellow;
   }
 }
 .content-description {
@@ -62,6 +61,7 @@ header {
   li {
     //display: inline-block;
     padding: 0.5rem;
+    list-style: circle;
   }
 }
 

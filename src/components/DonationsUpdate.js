@@ -15,20 +15,19 @@ class DonationsUpdate extends React.Component {
   //can check with console.log("did mount");
   componentDidMount() {
     // call my re-useable function and manually enter the charity ID  (cruk: 2357, oxfam:13441, bhf: 183092 ).
-    //getCharityDonationsById(2357)
+    //getCharityDonationsById(2357) - this is now replaced.
     getCharityDonationsById(this.props.charityId)
-      //fetching the json, (.then is like a callback function)  ****** EXPLAIN********
+      // taking  the previous promise, reading it and using another promise to make into Json (res) (.then is like a callback function)
       .then(res => res.json())
-      //update the state with the info from the api (state is like a holding place setState is a react method) ****** SETSTATE********
+      //update the state with the info from the api (state is like a holding place, setState is a react method)
       .then(
         result => {
           this.setState({
-            //****** EXPLAIN setState********
             isLoaded: true,
             content: result
           });
         },
-        //error function just in case (error is a built in react property)
+
         error => {
           this.setState({
             isLoaded: true,
@@ -43,8 +42,7 @@ class DonationsUpdate extends React.Component {
     if (error) {
       return <div>Error: {error.message} </div>;
     }
-
-    //if (!isLoaded) {
+    //if the content has not loaded yet, then show the text loading message
     if (isLoaded === false) {
       return (
         <div className="brand-primary">
@@ -55,7 +53,7 @@ class DonationsUpdate extends React.Component {
     }
     {
       // returns the content from the api and then iterates over each object to allow me access to the info  using  MAP AND KEY
-      //map: mapping over the data that we’ve pulled. This is like a for loop.
+      //map: mapping over the data that we’ve pulled. (This is like a for loop).
       return (
         <div className="donations-wrapper" id="latest-donations">
           <h2>

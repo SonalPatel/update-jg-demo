@@ -347,7 +347,8 @@ header {
 .content-description {
   padding: 2rem; }
   .content-description li {
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    list-style: circle; }
 
 /*charity module */
 .content-info {
