@@ -24,7 +24,7 @@ class HomeInfo extends React.Component {
               <li>
                 {" "}
                 I branched off the first assesment and created a new instance of
-                create react app{" "}
+                create react app.{" "}
               </li>
               <li>
                 Created new Components and wrappers for the updated code.{" "}
@@ -41,8 +41,8 @@ class HomeInfo extends React.Component {
                 variables.{" "}
               </li>
               <li>
-                Then in each relevant Component used getCharityById(2357) and
-                hard coded the charity ID. and tested that this rendered with
+                Then in each relevant component used ""getCharityById(2357)" and
+                hard coded the charity ID. Tested that this rendered with
                 different charities.
               </li>
               <li>
@@ -72,6 +72,7 @@ class HomeInfo extends React.Component {
                 mock function, which are also known as spies, as they let you
                 spy on the behaviour of a function.{" "}
               </li>
+              <li>Looked up how to format the html so it was easier to read</li>
 
               <li>
                 Lastly I made my variable in my function (charityId) into a
