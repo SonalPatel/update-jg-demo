@@ -14,7 +14,7 @@ describe("Render CharityUpdate component", () => {
   });
 
   //take a snapshot of the whole CharityUpdate component rendered html when it has sucsessfully loaded with no errors
-  it("should render full page", () => {
+  it("should render full component", () => {
     const state = {
       error: null,
       isLoaded: true,

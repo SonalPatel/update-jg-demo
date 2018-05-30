@@ -47,7 +47,8 @@ class CharityInfoUpdate extends React.Component {
     }
 
     //if its not true that content has loaded yet, then show the text loading message ************change this code as it's condfusing to read ***************
-    if (!isLoaded) {
+    //if (!isLoaded) {
+    if (isLoaded === false) {
       return (
         <div className="brand-primary">
           <p>Loading charity content...</p>

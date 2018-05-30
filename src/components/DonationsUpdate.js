@@ -43,8 +43,9 @@ class DonationsUpdate extends React.Component {
     if (error) {
       return <div>Error: {error.message} </div>;
     }
-    //if its not true that content has loaded yet, then show the text loading message ************change this code as it's condfusing to read ***************
-    if (!isLoaded) {
+    //if its not true that content has loaded yet, then show the text loading message ************change this code as it's confusing to read ***************
+    //if (!isLoaded) {
+    if (isLoaded === false) {
       return (
         <div className="brand-primary">
           <p>Loading latest donation details...</p>
