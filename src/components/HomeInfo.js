@@ -58,10 +58,15 @@ class HomeInfo extends React.Component {
                 Enzyme, installed jest and Enzyme.
               </li>
               <li>
-                Created a unit test to take snapshots of the
-                charityContentUpdate Component in various states (the loading
-                state, and the whole rendered component).Testing this in the
-                terminal as I worked, and working through errors.
+                wrote a very basic unit test to check if my page still renders
+                if there is no charity content (only donations).{" "}
+              </li>
+              <li>
+                Read and re-searched some more, Then I created a unit test to
+                take snapshots of the charityContentUpdate Component in various
+                states (the loading state, and the whole rendered
+                component).Testing this in the terminal as I worked, and working
+                through errors.
               </li>
               <li>
                 Worked on another unit test for the Api function which was
@@ -73,14 +78,40 @@ class HomeInfo extends React.Component {
 
               <li>
                 Lastly I made my variable in my function (charityId) into a
-                Prop, then used that prop for testing. This included assigning
-                the charityId to state, then passing that state to the two
-                Components as a prop. Exporting the charityId as a variable with
-                an ID (export const charityId = 2357;), and then assigningthe
-                charityId to state so
-                {`"state = { charityId: charityId"  }; `}
+                Prop, then used that prop for testing. This included passing the
+                propto the two Components. Exporting the charityId as a variable
+                with an ID (export const charityId = 2357;)
               </li>
-              <li> Quite a challenge! Lots more to learn for sure </li>
+              <li>
+                Given more time:
+                <ul>
+                  <li>
+                    I would have liked to organise my components and containers
+                    in a more efficient way. Using presentational components to
+                    dispaly content and containers to fetch data, and break my
+                    code up into smaller chunks of code.
+                  </li>
+
+                  <li>
+                    Would have written a unit test for the error message if it
+                    was to display.
+                  </li>
+                  <li>
+                    Changed the design and sass a little to be more neutral,
+                    rather than brand specific.
+                  </li>
+                  <li>
+                    Also I would have liked to have tried to have a go at using
+                    react router dom to pass in a charity id via a url.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>
+                  Wow! Quite a challenge! Learned how to swim very fast, lots
+                  and lots more to learn for sure...
+                </strong>
+              </li>
             </ol>
           </div>
         </div>
