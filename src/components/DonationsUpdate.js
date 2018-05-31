@@ -13,10 +13,8 @@ class DonationsUpdate extends React.Component {
   componentDidMount() {
     //getCharityDonationsById(2357) - this is now replaced as a prop below.
     getCharityDonationsById(this.props.charityId)
-      // taking  the previous promise, reading it and using another promise to make into Json (res)
-      //(.then is like a callback function)
       .then(res => res.json())
-      //update the state with the info from the api
+
       .then(
         result => {
           this.setState({
@@ -34,7 +32,6 @@ class DonationsUpdate extends React.Component {
       );
   }
   render() {
-    //check if the content has loaded and set the state
     const { error, isLoaded, content } = this.state;
     if (error) {
       return <div>Error: {error.message} </div>;
@@ -49,8 +46,6 @@ class DonationsUpdate extends React.Component {
       );
     }
     {
-      // returns the content from the api and then iterates over each object to allow me access to the info  using  MAP AND KEY
-      //map: mapping over the data that we’ve pulled. (This is like a for loop).
       return (
         <div className="donations-wrapper" id="latest-donations">
           <h2>

@@ -11,11 +11,9 @@ class CharityInfoUpdate extends React.Component {
     };
   }
 
-  //fetch returns a promise which contains various information.
   componentDidMount() {
     //getCharityById(2357)
     getCharityById(this.props.charityId)
-      // taking  the previous promise, reading it and using another promise to make into Json (res) (.then is like a callback function)
       .then(res => res.json())
       .then(
         result => {
@@ -50,8 +48,6 @@ class CharityInfoUpdate extends React.Component {
       );
     }
 
-    // returns the content from the api and then iterates over each object to allow me access to the info
-    //(charityContent is my varible name for the instance of each index defined in the settings at the top);
     return (
       <div className="content-info" id="content" role="main">
         <div className="charity-wrapper">
