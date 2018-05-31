@@ -1,17 +1,15 @@
 import React from "react";
 
 class CharityInfo extends React.Component {
- 
   constructor(props) {
     super(props);
     this.state = {
       error: null,
       isLoaded: false,
-      charityContent: [] 
+      charityContent: []
     };
   }
 
- .
   componentDidMount() {
     fetch("https://api.justgiving.com/8b28a350/v1/charity/13441", {
       headers: {
@@ -19,9 +17,8 @@ class CharityInfo extends React.Component {
         "Content-Type": "application/json"
       }
     })
-      
       .then(res => res.json())
-   
+
       .then(
         result => {
           this.setState({
@@ -29,7 +26,7 @@ class CharityInfo extends React.Component {
             charityContent: result
           });
         },
-      
+
         error => {
           this.setState({
             isLoaded: true,
@@ -41,21 +38,17 @@ class CharityInfo extends React.Component {
 
   render() {
     const { error, isLoaded, charityContent } = this.state;
-  
+
     if (error) {
       return <div>Error: {error.message} </div>;
-    }
-
-    else if (!isLoaded) {
+    } else if (!isLoaded) {
       return (
         <div className="brand-primary">
           <p>Loading charity content...</p>
           <div className="lds-circle" />
         </div>
       );
-    }
-  
-    else {
+    } else {
       return (
         <div className="content-info" id="content" role="main">
           <div className="charity-wrapper">
