@@ -97,6 +97,7 @@ class HomeInfo extends React.Component {
                     Would have written a unit test for the error message if it
                     was to display.
                   </li>
+                  <li>Look into the toolkit and start to use it.</li>
                   <li>
                     Changed the design and sass a little to be more neutral,
                     rather than brand specific.
