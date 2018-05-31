@@ -42,11 +42,13 @@ class HomeInfo extends React.Component {
                 different charities.
               </li>
               <li>
-                Then I followed the documentation on the ctreate react docs to
-                create new pages via React router dom
+                Next, I followed the documentation on the ctreate react docs to
+                create new pages via React router dom.
               </li>
+              <li>Created a new HomeContainer and HomeInfo Component.</li>
               <li>
-                Updated the header accordingly to navigate to the correct pages.
+                Updated the header accordingly to navigate to the correct pages
+                and updated App.js with the Router.
               </li>
               <li>
                 Worked with Pete to write simple funtions and then learnt how to
