@@ -1,7 +1,7 @@
 import React from "react";
 import jgLogo from "../g-logo-small.png";
 import "../styles/App.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   render() {
